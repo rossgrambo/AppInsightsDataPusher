@@ -7,12 +7,46 @@
 </head>
 <body>
     <h1>Custom Event Tracker</h1>
+    <!-- Instrumentation Key -->
+    <label for="instrumentationKey">Instrumentation Key:</label>
+    <input type="text" id="instrumentationKey">
+
+    <!-- Event Name -->
     <label for="eventName">Event Name:</label>
     <input type="text" id="eventName">
+
+    <!-- Number of Users -->
     <label for="userCount">Number of Users:</label>
     <input type="number" id="userCount">
+
+    <!-- Events per User -->
     <label for="eventsPerUser">Events per User:</label>
     <input type="number" id="eventsPerUser">
+
+    <!-- Feature Flags -->
+    <label for="featureName">Feature Name:</label>
+    <input type="text" id="featureName">
+    <label for="variants">Variants (comma-separated):</label>
+    <input type="text" id="variants">
+    <label for="allocations">Allocations (comma-separated):</label>
+    <input type="text" id="allocations">
+
+    <!-- Custom Metrics -->
+    <label for="metricName">Metric Name:</label>
+    <input type="text" id="metricName">
+    <label for="metricLows">Metric Lows (comma-separated):</label>
+    <input type="text" id="metricLows">
+    <label for="metricHighs">Metric Highs (comma-separated):</label>
+    <input type="text" id="metricHighs">
+
+    <!-- Feature Flags (continued) -->
+    <label for="flagId">Flag ID:</label>
+    <input type="text" id="flagId">
+    <label for="etag">Etag:</label>
+    <input type="text" id="etag">
+    <label for="flagReference">Flag Reference:</label>
+    <input type="text" id="flagReference">
+    
     <button onclick="sendCustomEvents()">Send Events</button>
     <script src="app.js"></script>
 </body>
