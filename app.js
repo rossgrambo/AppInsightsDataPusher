@@ -1,5 +1,9 @@
 // app.js
 function sendCustomEvents() {
+    // Show loading icon
+    const loadingIcon = document.querySelector('.loading-icon');
+    loadingIcon.style.display = 'block';
+
     const instrumentationKey = document.getElementById('instrumentationKey');
     const telemetryClient = new Microsoft.ApplicationInsights.TelemetryClient(instrumentationKey);
 
@@ -59,4 +63,11 @@ function sendCustomEvents() {
 
     // Flush telemetry (optional)
     telemetryClient.flush();
+
+    // Hide loading icon
+    loadingIcon.style.display = 'none';
+
+    // Show checkmark
+    const checkmark = document.querySelector('.checkmark');
+    checkmark.style.display = 'block';
 }
