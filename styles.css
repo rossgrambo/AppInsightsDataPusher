@@ -1,110 +1,64 @@
 /* styles.css */
 
-/* Reset box-sizing to border-box for all elements */
-* {
-    box-sizing: border-box;
-}
-
 /* Center the h1 element */
 h1 {
     text-align: center;
 }
 
-/* Create a flex container for the main content */
-main {
+/* styles.css */
+
+.container {
     display: flex;
-    margin-top: 50px;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
-/* Left panel containing form elements */
-.form {
-    flex-basis: 500px;
-    border: solid 1px #cccccc;
-    padding: 10px 50px;
-    box-shadow: 0 0 3px #cccccc;
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 0 20px; /* Gap between columns and rows */
+    max-width: 600px; /* Adjust as needed */
+    padding: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
-/* Individual form sections */
-.form section {
-    border: dashed 2px #aaaaaa;
-    border-radius: 5px;
-    box-shadow: 0 0 3px #aaaaaa;
-    transition: all 0.2s;
-    margin-bottom: 30px;
-    padding: 50px;
-    font-size: 1.1rem;
+/* Style labels and inputs */
+label {
+    font-weight: bold;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
 
-/* Highlight form section on hover */
-.form section:hover {
-    box-shadow: 0 0 8px #aaaaaa;
-    border-color: #888888;
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
-/* Form labels */
-.form section label {
-    text-decoration: underline #000000;
+button {
+    grid-column: span 2; /* Make the button span both columns */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
     cursor: pointer;
 }
 
-/* Form input fields */
-.form-group {
-    margin-bottom: 25px;
+button:hover {
+    background-color: #0056b3;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: solid 1px #cccccc;
-    box-shadow: 0 0 2px #cccccc;
-}
-
-/* Hide file input (for file uploads) */
-#file-input {
-    display: none;
-}
-
-/* Right panel for loading icon */
-.profile-card {
-    flex-basis: 300px;
-    border: solid 2px #cccccc;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #cccccc;
-    padding: 40px 35px;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Profile image container */
-.img-container {
-    margin-bottom: 50px;
-}
-
-.img-container img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-}
-
-/* Profile card name and occupation */
-.profile-card.name {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.profile-card.occupation {
-    font-size: 1.2rem;
+.loading-icon {
+    height: 25px;
 }
 
 /* Loading icon */
@@ -122,7 +76,6 @@ main {
 .checkmark {
     font-size: 24px;
     color: #4caf50;
-    display: none; /* Initially hidden */
 }
 
 /* Loading icon animation */
